@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(192, 192, 211);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: rgb(114, 139, 139);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+button {
+    background-color: bisque;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(52, 52, 186);
+}
+
+.image {
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #403f3f;
+    color: rgb(193, 188, 99);
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: rgb(114, 139, 139);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: rgb(255, 100, 100);
+}
+
+.container {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*animaçãp de explosão*/
+#explosao {
+    position: relative;
+    margin-top: 20px;
+}
+
+.sinal {
+    position: absolute;
+    font-size: 24px;
+    color: #e52727; 
+    animation: explodir 1s ease-out forwards;
+}
+
+@keyframes explodir {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+    }
+}

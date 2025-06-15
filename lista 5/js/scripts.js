@@ -201,7 +201,7 @@ function exe8() {
         }
     }
 }
-function exeProdutos() {
+function exe9() {
     let produtos = []
 
     for (let i = 0; i < 5; i++) {
